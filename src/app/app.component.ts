@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-
+ import { FormsModule }   from '@angular/forms';
+ import { AngularFireModule } from 'angularfire2';
+ import { AngularFireAuthModule } from 'angularfire2/auth';
+  import { AngularFireDatabaseModule } from 'angularfire2/database';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -1,0 +1,88 @@
+body {background: #EAEAEA;}
+.user-details {position: relative; padding: 0;}
+.user-details .user-image {position: relative;  z-index: 1; width: 100%; text-align: center;}
+ .user-image img { clear: both; margin: auto; position: relative;}
+
+.user-details .user-info-block {width: 100%; position: absolute; top: 55px; background: rgb(255, 255, 255); z-index: 0; padding-top: 35px;}
+ .user-info-block .user-heading {
+   width: 100%; text-align: center;
+    margin: 26px 0 10px 0;}
+ .user-info-block .navigation {
+   float: left; width: 100%; margin: 0; padding: 0;
+    list-style: none;
+  }
+  .navigation li {
+    float: right;
+    margin: 0; padding: 0;}
+   .navigation li a {padding: 20px 30px; float: left;}
+ .user-info-block .user-body {float: left; padding: 5%; width: 90%;}
+  .user-body .tab-content > div {float: left; width: 100%;}
+  .user-body .tab-content h4 {width: 100%; margin: 10px 0; color: #333;}
+  .changepass-div
+  {
+    padding-left: 350px;
+    padding-bottom: 15px;
+    margin-top: 59px;
+    padding-right: 350px;
+   
+  }
+  .header-padding
+  {
+    margin-top: 5px;
+  }
+  .change div
+  {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .header-style
+  {
+      color: darkcyan  !important;
+      font-weight: bold  !important;
+      font-size: 20px  !important;
+  }
+  label.filebutton {
+    width:120px;
+    height:40px;
+    overflow:hidden;
+    position:relative;
+    background-color:#ccc;
+}
+
+label span input {
+    z-index: 999;
+    line-height: 0;
+    font-size: 50px;
+    position: absolute;
+    top: -2px;
+    left: -700px;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    -ms-filter: "alpha(opacity=0)";
+    cursor: pointer;
+    _cursor: hand;
+    margin: 0;
+    padding:0;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    cursor: pointer;
+}
+@media only screen and (min-width: 922px) {
+  .center_div{
+      margin: 0 auto;
+      width:50% 
+  }
+}
+.center-button{
+  text-align: center;
+  margin-top: 40px;
+}

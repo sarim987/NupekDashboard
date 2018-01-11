@@ -1,0 +1,91 @@
+      <app-header-nav></app-header-nav>
+        <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body" >
+       <div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark">
+           <app-aside-nav>      
+            </app-aside-nav>
+        </div>
+        <div class="m-grid__item m-grid__item--fluid m-wrapper">
+           <div class="m-content " >
+     <div class="row  font-family">
+            <div class="col-xl-12">
+     <div  style="background-color: white">
+            <div class="m-portlet" id="m_portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h4 class="m-portlet__head-text header-style">
+							My Account
+							</h4>
+						</div>
+					</div>					
+				</div>
+				<div class="m-portlet__body">
+                        <div id="m_calendar">
+							<div class="">	
+                                        <div class="">
+                                            <div class="user-info-block">
+                                                <div class="user-heading">
+                                                <div  class="image-upload">
+                                                                <label for="file-input">
+                                                                    <img *ngIf="userImage" height="120px" width="120px" src="./assets/asset/img//1.png">
+                                                                   <img  *ngIf="userViewImage"  height="120" width="120" class= "rounded-circle" src={{items.userImage}} />
+                                                                </label>
+                                                                <input   id="file-input"  type="file" (change)="detectFiles($event)">
+                                                    
+                                                            </div>
+                                                       
+                                                        <h3>{{username}}</h3>
+                                                 <span class="help-block">Email:<span>{{userEmail}}</span></span>
+                                                </div>
+<br/>
+<br/>
+                                               <div class="container center_div margin-form" >
+                                                <div class="form-div">  
+                                                        <div class="form-group">
+                                                        <h2 class="header-padding">Change Password</h2>
+                                                        </div>
+                                                        <br/>    
+                                                        <div class="form-group">
+                                                                <label >EmailID</label>
+                                                                <input id="NameOnCard" value="{{userEmail}}" disabled [(ngModel)]="model.emailID" class="form-control" type="text" maxlength="255"/>
+                                                            </div>         
+                                                        <div class="form-group">
+                                                            <label >Old Password</label>
+                                                            <input id="NameOnCard" [(ngModel)]="model.oldPass" class="form-control" type="text" maxlength="255"/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label >New Password</label>
+                                                                <input id="NameOnCardd" [(ngModel)]="model.newPass" class="form-control" type="text" maxlength="255"/>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                    <label >Confirm New Password</label>
+                                                                    <input id="NameOnCarddd" [(ngModel)]="model.conNewPass" class="form-control" type="text" />
+                                                                </div>
+                                                                <div class="center-button">
+                                                                <button (click)="changePassword()" id="PayButton" class="btn  btn-success " type="submit">
+                                                                        <span class="submit-button-lock"></span>
+                                                                        <span class="align-middle"  >Change Password</span>
+                                                                    </button>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                             <div class="changepass-div">
+                                                <div class="change div">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+								</div>
+							</div>
+						</div>
+			</div>
+        </div>
+</div>
+    </div>
+</div>
+        <router-outlet>
+       </router-outlet>
+        </div></div>       
+     
+       

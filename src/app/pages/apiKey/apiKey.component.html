@@ -1,0 +1,164 @@
+
+        <app-header-nav></app-header-nav>
+        <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body" >
+           
+        <div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark">
+           <app-aside-nav>      
+            </app-aside-nav>
+        </div>
+        <div class="m-grid__item m-grid__item--fluid m-wrapper">
+           <!--End::Section-->     <!--Begin::Section-->
+           <div class="m-content">
+	<div class="row  font-family">
+		<div class="col-xl-12">
+			<!--begin::Portlet-->
+			<div class="m-portlet" id="m_portlet">
+                <div class="windowView">
+				<div class="m-portlet__head " >
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+						
+							<h3 class=" header-style m-portlet__head-text font-family modal-header-text" >
+								Copy Or Regenrate Your API KEY for the Respactive Companies
+							</h3>
+						</div>
+					</div>
+					<div class="m-portlet__head-tools">
+						<ul class="m-portlet__nav">
+							<li class="m-portlet__nav-item">
+								<a (click)="open(content,0)" class="btn btn-accent m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air" style="color: white">
+									<span>
+										<i class="la la-plus"></i>
+										<span>
+											Add Company 
+										</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+                </div>
+            </div>
+              <div class="m-portlet__body">
+                
+					<div id="m_calendar">
+                            <div class="windowView">
+                             
+                      <table  class="table">
+                          <tr>
+                              <th>Company and URL</th>
+                              <th>API Key</th>
+                              <th>Actions</th>
+                          </tr>
+                          <tr *ngFor="let item of companyData">
+                                <td>
+                                    <table class="table-border">
+                                        <tr>
+                                            <td colspan="2" class="table-border">
+                                                    <img  height="70" width="70" class= "rounded-circle" src={{item.CompanyImageURL}} />
+                                            </td>
+                                        
+                                           <td  style="border: none">
+                                               
+                                               <span class="top-font">{{item.CompanyName}}  </span>
+                                                <br/>
+                                                <span class="bottom-font"> {{item.CompanyURL}}  </span> 
+                                           </td>
+                                          
+                                           </tr>
+                                    </table>
+                                        
+                                       </td>
+                                <td>
+                                        {{item.ApiKey}}  
+                                </td>
+                                <td>
+                                    <span class="copy-regnrate pointer" (click)="copyKey(item)"><i class="fa fa-files-o" aria-hidden="true"></i>&nbsp;Copy</span> 
+                                    <span class="copy-regnrate pointer" (click)="regenerateKey(item)"><i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;Regenerate</span>
+                                </td>
+                            </tr>   
+                      </table>
+                      
+                      </div>
+                      <div class="mobileview hidden-lg">
+                           
+    
+                                <div>
+                                    <span style="float: left; font-size: 20px;font-weight: bold"  class="">Companies</span>
+                                    <span (click)="open(content,0)" style="float: right;font-size: 15px;" class="">
+                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            <table  class="table">
+                                    <tr *ngFor="let item of companyData">
+                                          <td style="text-align: center">
+                                            <img  height="70" width="70" class= "rounded-circle" src={{item.CompanyImageURL}} />
+                                              <br/><span class="top-font">{{item.CompanyName}}  </span>
+                                             <br/>
+                                             <span class="bottom-font"> {{item.CompanyURL}}  </span> 
+                                             <br/>
+                                                    <div>
+                                                            <br/>
+                                                            {{item.ApiKey}}  
+                                                    </div>
+                                                    <br/>
+                                                    <div>
+                                                            <span class="copy-regnrate pointer" (click)="copyKey(item)"><i class="fa fa-files-o" aria-hidden="true"></i>&nbsp;Copy</span> 
+                                                            <span class="copy-regnrate pointer" (click)="regenerateKey(item)"><i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;Regenerate</span> 
+                                                    </div>
+                                                 </td>     </tr>   
+                                </table>
+                      </div>
+                    </div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+		</div>
+    </div>
+    </div>
+    
+    <ng-template #content let-c="close" let-d="dismiss" id="myModal">
+        	<div class="">
+                    <div class="col-md-6">
+                        </div>                                                 
+                        </div>
+            <div class="modal-header">
+              <h4 class="modal-title header-style">Add New Company Details</h4>
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">             
+              <div>
+                    <fieldset>
+                            <div class="input-group">
+                                    <span class="input-group-addon bg-teal">
+                                       <i class="fa fa-window-restore" ></i>
+                                    </span>
+                                    <input class="form-control"  [(ngModel)]="model.companyName" data-val="true" id="CompanyName" name="CompanyName" placeholder="Company Name" type="text" value="" />
+                                </div>
+                                    <div class="input-group paddng-top">
+                                            <span class="input-group-addon bg-teal">
+                                               <i class="fa fa-link"></i>
+                                                </span>
+                                            <input class="form-control"  [(ngModel)]="model.companyURL" data-val="true" id="CompanyURL" name="CompanyURL" placeholder="Company URL" type="text" value="" />
+                                        </div>
+
+                                        <div class="input-group paddng-top">
+                                                <input class="form-control"  type="file" (change)="detectFiles($event)">
+                                                <div id="errLast"></div>
+                                                </div>  
+                                     </fieldset>   
+                                </div>             
+                        </div>
+            <div class="modal-footer">
+                     <button type="button" class="btn btn-outline-dark" (click)="addCompany()">Add</button>
+                    
+              <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+            </div>
+          </ng-template>
+        <router-outlet>
+       </router-outlet>
+        </div>       
+    </div>
+       

@@ -1,0 +1,112 @@
+
+.table th {
+    border-top:none  !important ;
+    font-weight: bold;
+    color:gray ;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.table-border
+{
+    border: none !important;
+}
+.top-font
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+font-size: 18px;
+}
+.bottom-font
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+.copy-regnrate
+{
+    color: grey;
+    margin-left: 15px;
+}
+.top-border
+{
+    border-top: none !important;
+}
+.font-family{
+    font-family: Arial, Helvetica, sans-serif
+}
+.pointer {cursor: pointer;}
+.paddng-top
+{
+    padding-top: 27px;
+}
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: darkcyan !important;
+    border-color: darkcyan !important;
+}
+.header-style
+{
+    color: darkcyan  !important;
+    font-weight: bold  !important;
+    font-size: 20px  !important;
+}
+.btn-outline-dark {
+    color: #343a40;
+    background-color: darkcyan !important;;
+    background-image: none !important;;
+    border-color: darkcyan !important;
+}
+.modal-footer {
+    padding: 15px !important;
+     border-top: none !important;
+}
+.modal-header-text
+{
+    font-size:20px;
+    font-weight: bold;
+    
+}
+.m-portlet .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text {
+    font-size:20px;
+    font-weight: bold;
+}
+.btn-accent
+{
+    background-color:darkcyan !important;
+    border-color:darkcyan !important;
+}
+.btn-outline-dark {
+    color: white !important;
+}
+
+.mobileview
+{
+    display: none !important
+}
+.windowView
+{
+    display: block !important
+}
+
+@media only screen and  (max-width: 780px) {
+        .mobileview
+        {
+            display: block !important
+        }
+        .windowView
+        {
+            display: none !important
+        }
+      }
+      @media only screen and  (min-width: 780px) {
+        .mobileview
+        {
+            display: none !important
+        }
+        .windowView
+        {
+            display: block !important
+        }
+      }
+
+  

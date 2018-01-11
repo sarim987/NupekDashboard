@@ -1,0 +1,139 @@
+
+        <app-header-nav></app-header-nav>
+        <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body" >
+           
+        <div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark">
+           <app-aside-nav>      
+            </app-aside-nav>
+        </div>
+        <div class="m-grid__item m-grid__item--fluid m-wrapper">
+           <!--End::Section-->     <!--Begin::Section-->
+           <div class="m-content">
+	<div class="row  font-family">
+		<div class="col-xl-12">
+			<!--begin::Portlet-->
+			<div class="m-portlet" id="m_portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+						
+							<h4 style="color: darkcyan  !important; font-weight: bold  !important; font-size: 20px  !important; " class="m-portlet__head-text font-family modal-header-text" >
+							Membership Details
+							</h4>
+						</div>
+					</div>
+					<div class="m-portlet__head-tools">
+						
+					</div>
+				</div>
+				<div class="m-portlet__body">
+                
+					<div id="m_calendar"  style="text-align: cenetr">
+                       
+                            <div  *ngIf="membershiSetting" class="m-widget12 m-widget12--chart-bottom m--margin-top-10" >
+                                    <div class="m-widget12__item">
+                            <span class="m-widget12__text1">
+                                    
+                                     <span>
+                                       Credit Card Number
+                                     </span>
+                                 </span>
+                                 <span class="m-widget12__text2">
+                                     
+                                     <span>
+                                      {{UserCreditCardNumber}}
+                                     </span>
+                                 </span>
+                                 </div>
+                                 </div>
+                    </div>
+                    <!-- Payment form -->
+           <div class="container center_div margin-form" *ngIf="paymentform" >
+                <div id="Checkout" class="inline">
+                <h1>Payment Details</h1>
+                <div class="card-row">
+                    <span class="visa"></span>
+                    <span class="mastercard"></span>
+                    <span class="amex"></span>
+                    <span class="discover"></span>
+                </div>  
+              
+                <div class="">               
+                     <div class="form-group">
+                         <label >owner Name</label>
+                         <input  class="col-md-4" id="NameOnCard" [(ngModel)]="model.NameOfOwner" class="form-control" type="text" maxlength="255"/>
+                     </div>
+                     <div class="form-group">
+                         <label for="CreditCardNumber">Card number</label>
+                         <input id="cc-number" [(ngModel)]="model.CreditCardNumber" type="tel" autocomplete="cc-number" class="form-control" ccNumber>
+                         </div>
+                     <div class="expiry-date-group form-group">
+                         <label for="ExpiryDate">Expiry date</label>
+                         <input id="cc-exp-date" type="tel"  [(ngModel)]="model.ExpiryDate" autocomplete="cc-exp" class="form-control" ccExp>
+                            </div>
+                     <div class="security-code-group form-group">
+                         <label for="SecurityCode">Security code</label>
+                         <div class="input-container" >
+                                <input id="cc-cvc" type="tel" [(ngModel)]="model.SecurityCode" class="form-control" autocomplete="off" ccCVC>
+                                 
+                         </div>
+                        
+                     </div>
+                     
+                     <div class="center-button">
+                     <button (click)="AddPaymentDetails()" id="PayButton"  class="btn    btn-success " type="submit">
+                         <span class="submit-button-lock"></span>
+                         <span class="align-middle" >Add Payment Details</span>
+                     </button>
+                    </div>
+                </div>
+           
+		</div>
+    </div>
+    </div>
+
+    <ng-template #content let-c="close" let-d="dismiss" id="myModal">
+        	<div class="">
+                    <div class="col-md-6">
+                        </div>                                                 
+                        </div>
+            <div class="modal-header">
+              <h4 class="modal-title header-style">Add New Company Details</h4>
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">             
+              <div>
+                    <fieldset>
+                            <div class="input-group">
+                                    <span class="input-group-addon bg-teal"><i class="fa fa-user"></i></span>
+                                    <input class="form-control"  [(ngModel)]="model.companyName" data-val="true" id="CompanyName" name="CompanyName" placeholder="Company Name" type="text" value="" />
+                                </div>
+                                    <div class="input-group paddng-top">
+                                            <span class="input-group-addon bg-teal"><i class="fa fa-user"></i></span>
+                                            <input class="form-control"  [(ngModel)]="model.companyURL" data-val="true" id="CompanyURL" name="CompanyURL" placeholder="Company URL" type="text" value="" />
+                                        </div>
+
+                                        <div class="input-group paddng-top">
+                                                <input class="form-control"  type="file" (change)="detectFiles($event)">
+                                                <div id="errLast"></div>
+                                                </div>  
+                                     </fieldset>   
+                                </div>             
+                        </div>
+            <div class="modal-footer">
+                    <button type="button" data-target="#myModal" class="btn btn-outline-dark" (click)="closeCompany()">close Modal</button>
+                    
+                    <button type="button" class="btn btn-outline-dark" (click)="addCompany()">Add Company</button>
+                    
+              <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+            </div>
+          </ng-template>
+          <!-- <app-footer></app-footer> -->
+        <router-outlet>
+       </router-outlet>
+       
+        </div>
+        
+    </div>

@@ -1,14 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"  appunwraptag="">
 <head>
   <meta charset="utf-8">
-  <title>Angular5Demo</title>
+  <title>OUTGROW</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="./assets/asset/12.jpg">
+ <!--begin::Web font -->
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+   <script>
+               WebFont.load({             google: {"families":["Montserrat:300,400,500,600,700","Roboto:300,400,500,600,700"]},       
+                     active: function() {         
+                               sessionStorage.fonts = true;  
+                                         }      
+                                             });         
+  </script>
+  	<!--end::Web font -->          <!--begin::Base Styles -->                              <!--begin::Page Vendors -->
+		<link href="./assets/asset/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendors -->
+		<link href="./assets/asset/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/asset/demo/demo3/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Base Styles -->
+		<link rel="shortcut icon" href="assets/asset/demo/demo3/media/img/logo/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <!--end::Web font --> 
 </head>
-<body>
-  <app-root></app-root>
+ <!-- begin::Page loader -->
+  <!-- end::Page loader -->    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" > -->
+<body  class="m-page--loading-non-block m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+  
+  <app-root>
+      <div class="m-page-loader m-page-loader--non-block" style="margin-left: -80px; margin-top: -20px;">
+          <div class="m-blockui">
+            <span>
+              Please wait...
+            </span>
+            <span>
+              <div class="m-loader m-loader--brand"></div>
+            </span>
+          </div>
+        </div>
+  </app-root>
 </body>
 </html>
