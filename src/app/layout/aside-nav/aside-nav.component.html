@@ -1,65 +1,71 @@
 <!-- BEGIN: Left Aside -->
 <!-- <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body" > -->
-	
-<button	 class="m-aside-left-close m-aside-left-close--skin-dark" id="m_aside_left_close_btn" appunwraptag="">
+
+<button class="m-aside-left-close m-aside-left-close--skin-dark" id="m_aside_left_close_btn" appunwraptag="">
 	<i class="la la-close"></i>
 </button>
-<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark">	<!-- BEGIN: Aside Menu -->
-	<div id="m_ver_menu"  class="m-aside-menu font-family 
-	 m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark m-aside-menu--dropdown"
-	data-menu-vertical="true" data-menu-dropdown="true" data-menu-scrollable="true" data-menu-dropdown-timeout="500"   		>
-	<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow">
-	<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }"  aria-haspopup="true" >
-		<a  [routerLink]="['/teamseting']"  class="m-menu__link"> 
+<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark">
+	<!-- BEGIN: Aside Menu -->
+	<div id="m_ver_menu" class="m-aside-menu font-family 
+	 m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark m-aside-menu--dropdown" data-menu-vertical="true" data-menu-dropdown="true"
+	 data-menu-scrollable="true" data-menu-dropdown-timeout="500">
+		<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow">
+			<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }" aria-haspopup="true">
+				<a [routerLink]="['/teamseting']" class="m-menu__link">
 					<span class="m-menu__item-here"></span>
 					<i class="fa fa-users m-menu__link-icon" aria-hidden="true"></i>
 					<!-- <i class="m-menu__link-icon flaticon-line-graph"></i> -->
 					<span class="m-menu__link-text">
-					TEAM SETTINGS
-					<br/>
-					Invite new team members and manage user permissoins
+						TEAM SETTINGS
+
 					</span>
-			</a>
-			</li>
-			<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }"  aria-haspopup="true" >
-			<a  [routerLink]="['/membershipdetails']"  class="m-menu__link"> 
-						<span class="m-menu__item-here"></span>
-						<i class="m-menu__link-icon flaticon-line-graph"></i>
-						<span class="m-menu__link-text">
-							MEMBERSHIP DETAILS
-						<br/>
-						View your plan details and invoices
-						</span>
 				</a>
-				</li>
-				<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }"  aria-haspopup="true" >
-						<a  [routerLink]="['/apikey']"  class="m-menu__link"> 
-									<span class="m-menu__item-here"></span>
-									<i class="fa fa-key  m-menu__link-icon" aria-hidden="true"></i>
-									<span class="m-menu__link-text">
-											API KEY
-									<br/>
-									Copy or Regenerate your API Key used for Integration
-									</span>
-							</a>
-							</li>
-							<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }"  aria-haspopup="true" >
-									<a  [routerLink]="['/myaccount']"  class="m-menu__link"> 
-												<span class="m-menu__item-here"></span>
-												<i class="fa fa-user-circle m-menu__link-icon" aria-hidden="true"></i>
-												<span class="m-menu__link-text">
-														MY ACCOUNT
-												<br/>
-												View and  edit your account details
-												</span>
-										</a>
-										</li>
-						
-					</ul>
-				</div>	
-				<div></div>				
-<router-outlet></router-outlet>
+			</li>
+			<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }" aria-haspopup="true">
+				<a [routerLink]="['/membershipdetails']" class="m-menu__link">
+					<span class="m-menu__item-here"></span>
+					<i class="m-menu__link-icon flaticon-line-graph"></i>
+					<span class="m-menu__link-text">
+						MEMBERSHIP
+
+					</span>
+				</a>
+			</li>
+			<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }" aria-haspopup="true">
+				<a [routerLink]="['/billing']" class="m-menu__link">
+					<span class="m-menu__item-here"></span>
+					<i class="m-menu__link-icon flaticon-coins"></i>
+					<span class="m-menu__link-text">
+						BILLING
+
+					</span>
+				</a>
+			</li>
+			<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }" aria-haspopup="true">
+				<a [routerLink]="['/apikey']" class="m-menu__link">
+					<span class="m-menu__item-here"></span>
+					<i class="fa fa-key  m-menu__link-icon" aria-hidden="true"></i>
+					<span class="m-menu__link-text">
+						API KEYS
+
+					</span>
+				</a>
+			</li>
+			<li class="m-menu__item  " routerLinkActive="m-menu__item--active" routerLinkActiveOptions="{ exact: true }" aria-haspopup="true">
+				<a [routerLink]="['/myaccount']" class="m-menu__link">
+					<span class="m-menu__item-here"></span>
+					<i class="fa fa-user-circle m-menu__link-icon" aria-hidden="true"></i>
+					<span class="m-menu__link-text">
+						MY ACCOUNT
+
+					</span>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+	<div></div>
+	<router-outlet></router-outlet>
 
 	<!-- </div> -->
-<!-- END: Left Aside -->
-
+	<!-- END: Left Aside -->

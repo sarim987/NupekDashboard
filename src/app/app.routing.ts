@@ -9,15 +9,20 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms'; 
  import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
  import {ToastModule} from 'ng2-toastr/ng2-toastr';
- import {MemberComponent} from './pages/membership/membership.component'
- import {ApiKeyComponent} from './pages/apiKey/apiKey.component'
- import {MyAccountComponent} from './pages/myAcoount/myAccount.component'
+ import {MemberComponent} from './pages/membership/membership.component';
+ import {ApiKeyComponent} from './pages/apiKey/apiKey.component';
+ import {MyAccountComponent} from './pages/myAcoount/myAccount.component';
+ import { BillingComponent } from './pages/billing/billing.component';
+ import { PricingComponent } from './pages/pricing/pricing.component';
 const appRoutes: Routes = [
  { path: '', redirectTo: 'login', pathMatch: 'full' },
  { path: 'login', component: LoginComponent },
  { path: 'teamseting', component: TeamSettingComponent },
  { path: 'membershipdetails', component: MemberComponent },
  { path: 'apikey', component: ApiKeyComponent },
- { path: 'myaccount', component: MyAccountComponent }
+ { path: 'myaccount', component: MyAccountComponent },
+ { path: 'billing', component: BillingComponent },
+ { path: 'pricing', component: PricingComponent }
+
 ];
 export const routing = RouterModule.forRoot(appRoutes);

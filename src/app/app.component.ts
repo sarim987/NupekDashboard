@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
  import { AngularFireModule } from 'angularfire2';
  import { AngularFireAuthModule } from 'angularfire2/auth';
   import { AngularFireDatabaseModule } from 'angularfire2/database';
+  import {Helpers} from "./helpers";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

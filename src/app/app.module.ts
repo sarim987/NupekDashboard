@@ -25,7 +25,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
  import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core'
-import { CreditCardDirectivesModule } from 'ng2-cc-library'
+import { CreditCardDirectivesModule } from 'ng2-cc-library';
+import { BillingComponent } from './pages/billing/billing.component'
+import { ScriptLoaderService } from "./_services/script-loader.service";
+import { PricingComponent } from './pages/pricing/pricing.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAa56ssObsyQjfdOgfy1ohaUdn9PIqNoYU",
@@ -46,7 +49,9 @@ export const firebaseConfig = {
     TeamSettingComponent,
     MemberComponent,
     ApiKeyComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    BillingComponent,
+    PricingComponent
    
     // UploadService
   ],
@@ -64,7 +69,7 @@ export const firebaseConfig = {
      NgbModule.forRoot(),
      CreditCardDirectivesModule
   ],
-  providers: [  
+  providers: [  ScriptLoaderService
   ],
   bootstrap: [AppComponent]
 })
